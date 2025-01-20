@@ -1,5 +1,7 @@
 'use strict';
 
+const body = document.querySelector('body');
+
 function waitFor(element, eventName) {
   return new Promise((resolve) => {
     element.addEventListener(eventName, () => {
@@ -22,7 +24,6 @@ const printMessage = (message) => {
 const loginField = document.getElementById('login');
 const passwordField = document.getElementById('password');
 const button = document.getElementById('submit');
-const body = document.querySelector('body');
 
 waitFor(loginField, 'click').then(printMessage);
 waitFor(passwordField, 'click').then(printMessage);
